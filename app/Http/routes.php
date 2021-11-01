@@ -16,7 +16,14 @@ Route::get('/', function () {
 });
 
 Route::get('/tasks', function () {
-    return view('tasks.index');
+    $tasks = \App\Models\Task::all();
+
+    return view(
+        'tasks.index',
+        [
+            'tasks' => $tasks,
+        ]
+    );
 })->name('tasks.index');
 
 Route::get('/tasks/create', function () {
