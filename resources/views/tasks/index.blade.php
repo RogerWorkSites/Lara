@@ -7,5 +7,6 @@
     <!-- Отображение ошибок проверки ввода -->
     @include('common.errors')
 </div>
+<a href="{{route('task.create')}}" class="btn btn-success"><i class="fa fa-plus"></i> Create new Task</a>
 <!-- TODO: Текущие задачи -->
 @endsection
