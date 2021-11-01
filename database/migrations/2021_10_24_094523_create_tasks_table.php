@@ -14,8 +14,8 @@ class CreateTasksTable extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('task');
-            $table->index('task'); // add index to quick search for task_name
+            $table->string('name');
+            $table->index('name'); // add index to quick search for task_name
             $table->timestamps();
         });
     }
