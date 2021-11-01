@@ -17,4 +17,12 @@ Route::get('/', function () {
 
 Route::get('/tasks', function () {
     return view('tasks.index');
-});
+})->name('task.index');
+
+Route::get('/tasks/create', function () {
+    return view('tasks.create');
+})->name('task.create');
+
+Route::post('/tasks', function () {
+    //TODO STORE
+})->name('task.store');
